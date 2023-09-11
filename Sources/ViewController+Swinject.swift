@@ -16,13 +16,13 @@ private var uivcWasInjectedKey: String = "UIViewController.wasInjected"
 
 extension UIViewController: RegistrationNameAssociatable, InjectionVerifiable {
     public var swinjectRegistrationName: String? {
-        get { return getAssociatedString(key: &uivcRegistrationNameKey) }
-        set { setAssociatedString(newValue, key: &uivcRegistrationNameKey) }
+        get { return getAssociatedString(key: uivcRegistrationNameKey) }
+        set { setAssociatedString(newValue, key: uivcRegistrationNameKey) }
     }
 
     public var wasInjected: Bool {
-        get { return getAssociatedBool(key: &uivcWasInjectedKey) ?? false }
-        set { setAssociatedBool(newValue, key: &uivcWasInjectedKey) }
+        get { return getAssociatedBool(key: uivcWasInjectedKey) ?? false }
+        set { setAssociatedBool(newValue, key: uivcWasInjectedKey) }
     }
 }
 
